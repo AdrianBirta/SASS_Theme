@@ -1,0 +1,24 @@
+@keyframes spin-in {
+    60% { @include transform(rotate(110deg)); }
+    100% { @include transform(rotate(90deg)); }
+}
+@keyframes spin-out {
+    from { @include transform(rotate(90deg)); }
+    to { @include transform(rotate(0deg)); }
+}
+@keyframes fade-in {
+    from { @include transform(translateX(70px)); opacity:0; }
+    to { @include transform(translateX(0px)); opacity:1; }
+}
+@keyframes fade-out {
+    from { @include transform(translateX(0px)); opacity:1; }
+    to { @include transform(translateX(70px)); opacity:0; }
+}
+@keyframes index-transform-in {
+    from { z-index:-1; }
+    to { z-index:1; }
+}
+@keyframes index-transform-out {
+    from { z-index:1; }
+    to { z-index:-1; }
+}

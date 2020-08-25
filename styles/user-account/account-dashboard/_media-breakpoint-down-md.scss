@@ -1,0 +1,28 @@
+@include media-breakpoint-down(md) {
+
+    main .account-section {
+        padding: 0;
+
+        & .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+
+            & .row .col-md-12 {
+                padding: 0;
+
+                & .main-block {
+                    margin: 0;
+
+                    & .title-menu {
+                        padding-left: 1rem;
+                    }
+
+                    & .menu-account .menu {
+                        height: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

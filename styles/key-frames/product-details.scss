@@ -1,0 +1,64 @@
+@keyframes productSpecificationLine {
+    0% {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+    }
+    50% {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    51% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    100% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+    }
+}
+
+@keyframes content-transition-top {
+    from {
+        height : 0;
+    }
+    to {
+        height : 10em;
+    }
+}
+
+@keyframes content-transition-bottom {
+    from {
+        margin-top: 20em;
+    }
+    to {
+        margin-top: 0em;
+    }
+}
+
+@keyframes content-transition-fade-top {
+    from {
+        height : 10em;
+    }
+    to {
+        height : 0;
+    }
+}
+
+@keyframes content-transition-fade-bottom {
+    from {
+        margin-top : 0;
+    }
+    to {
+        margin-top : 50em;
+        position: absolute;
+        left: -9999px;
+    }
+}

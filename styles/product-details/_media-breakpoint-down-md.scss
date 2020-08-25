@@ -1,0 +1,92 @@
+@include media-breakpoint-down(md) {
+    .main-container {
+        .size-availability-overlay {
+            width: 94vw;
+        }
+
+        .product-tabs {
+            .tabs {
+                background: #f0f0f0;
+
+                span {
+                    padding-left: 3.5em;
+                }
+            }
+        }
+
+        .product-tabs-content {
+            padding: 3em 1em;
+
+            .review {
+                padding: 1em;
+            }
+        }
+
+        .wrapper {
+            background: #f0f0f0;
+
+            .product-title {
+                font-size: 1.95em;
+            }
+
+            .product-details {
+                .product-shipping {
+                    text-align: center;
+                }
+
+                .product-details-price-sale {
+                    text-align: center;
+                }
+
+                .product-details-review {
+                    margin-left: -0.5em;
+                }
+
+                .product-details-price {
+                    text-align: center;
+                }
+
+                .product-details-add-to-cart {
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+
+                .product-details-brand {
+                    height: unset;
+                }
+
+                .product-details-specifications {
+                    display: none;
+
+                    &.active {
+                        display: inline-block;
+                    }
+
+                    .product-details-specifications-size {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .col-md-7 {
+            flex: unset;
+            max-width: unset;
+        }
+
+        .col-md-4 {
+            flex: unset;
+            max-width: unset;
+
+            .product-details-brand {
+                float: right;
+            }
+        }
+
+        .col-md-1 {
+            flex: unset;
+            max-width: unset;
+            height: 3em;
+        }
+    }
+}

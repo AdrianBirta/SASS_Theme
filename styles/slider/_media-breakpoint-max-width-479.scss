@@ -1,0 +1,38 @@
+@media screen and (max-width:479px) {
+    main {
+        .main-top {
+            & .main-top-slider {
+                margin-bottom: 12rem;
+
+                & .slick-dots {
+                    bottom: -100px;
+                }
+                
+                & .container-fluid .row .col-3 {
+                    & .product-item {
+                        & .product-item-top {
+                            & .product-item-thumbs {
+                                @for $i from 1 through 5 {
+                                    & a:nth-child(#{$i}) {
+                                        // margin:0 30px;
+                                        @if $i == 1 {
+                                            left: $i * 1% + 2.5%;
+                                        } @else if $i == 2 {
+                                            left: $i * 10% + 2.5%;
+                                        } @else if $i == 3 {
+                                            left: $i * 13.3% + 2.5%;
+                                        } @else if $i == 4 {
+                                            left: $i * 15% + 2.5%;
+                                        } @else if $i == 5 {
+                                            left: $i * 16% + 2.5%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

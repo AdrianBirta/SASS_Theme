@@ -1,0 +1,35 @@
+@include media-breakpoint-down(xs) {
+    .main-container {
+        & .wrapper {
+           & main {
+                & .cart-section {
+                    & .container-fluid {
+                        & .footer-cart {
+                            & .row {
+                                & .col-lg-6 {
+                                    & .main-block {
+                                        & .main-block-content {
+                                           & .gift-input {
+                                                width: 100%;
+                                                margin-bottom: 1em;
+                                            }
+
+                                            & .form-box-submit-grey {
+                                                width: 100%;
+
+                                                &::before {
+                                                    height: 170%;
+                                                    top: -40%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

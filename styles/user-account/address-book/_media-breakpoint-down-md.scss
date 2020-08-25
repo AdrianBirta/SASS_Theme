@@ -1,0 +1,22 @@
+@include media-breakpoint-down(md) {
+    main .account-section .container-fluid .row .col-xl-8 .main-block {
+        & .main-block-content {
+
+            & .form-box-submit {
+                width: calc(100% - 60px);
+            }
+
+            & .row .col-lg-6 {
+
+                & h5 {
+                    font-size: 0.9em;
+                }
+
+                & p {
+                    width: 100%;
+                    margin-bottom: 3.5em;
+                }
+            }
+        }
+    }
+}

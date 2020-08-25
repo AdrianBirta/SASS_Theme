@@ -1,0 +1,70 @@
+.main-container {
+    & .wrapper {
+        & main {
+            & .container-fluid {
+                & .row {
+                    & .col-lg-6 {
+                        & > p {
+                            font-weight: 500;
+                        }
+
+                        & .main-block {
+                            & .main-block-content {
+                                & > p {
+                                    margin-bottom: 5em;
+                                }
+                                
+                                & .form-box-submit {
+                                    right:unset;
+                                    left:30px;
+                                }
+
+                                & form {
+                                    & .row {
+                                        & .col {
+                                            @include d-flex(align-items,center);
+
+                                            & .form-box-submit {
+                                                @include position-XY(relative,left,0,top,0);
+                                            }
+
+                                            & > a {
+                                                @include position-XY(relative,overflow,hidden);
+
+                                                &::before {
+                                                    @include position-XY(absolute,top,25px,left,-200%);
+                                                    @include size-WH(200%,1px);
+                                                    @include box-display(inherit,background,#000,content,"");
+                                                }
+
+                                                &:hover {
+                                                    color: $third-color;
+
+                                                    &::before {
+                                                        animation: line-bottom 0.9s forwards;
+                                                        animation-delay: 0.3s;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        & > div {
+                                            input[type='password'] {
+                                                @include text-config(font-size,0.8rem,font-weight,400,text-transform,uppercase);
+                                                @include transitions-with-effect(all,0.3s,ease);
+                                                border: none;
+                                                @include box-display(block,width,100%,border-bottom,1px solid #1e1e1e);
+                                                line-height: 2.625rem;
+                                                color: #9B9B9B;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@include media-breakpoint-down(lg) {
+    .main-container {
+        & .main-cover-image {
+            & .main-cover-box {
+                & .main-cover-content {
+                    & p {
+                        width: 88%;
+                    }
+                }
+            }
+        }
+    }
+}

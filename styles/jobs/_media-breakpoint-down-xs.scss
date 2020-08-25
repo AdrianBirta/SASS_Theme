@@ -1,0 +1,33 @@
+@include media-breakpoint-down(xs) {
+    .main-container {
+        & .wrapper {
+            & main {
+                & .row {
+                    & .middle-side {
+                        & .main-block {
+                            & .main-block-content {
+                                & .job-item-row {
+                                    & .col-sm-2, & .col-sm-3 {
+                                        & .row {
+                                            & .col-6, & .col-3 {
+                                                height: auto;
+
+                                                & p {
+                                                    margin:0;
+                                                }
+
+                                                & small {
+                                                    font-size: 0.9em;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

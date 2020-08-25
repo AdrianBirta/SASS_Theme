@@ -1,0 +1,152 @@
+header {
+
+    .header-categories {
+        @include box-config(display, flex, flex-direction, column);
+
+        & .header-categories-top {
+            @include size-WH(100%, auto);
+            text-align: center;
+            padding: 1rem 0;
+
+            h1 {
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+
+            small {
+                text-transform: lowercase;
+                font-style: italic;
+                color: $primary-color;
+            }
+        }
+
+        & > img {
+            margin-bottom: 1rem;
+            @include size-WH(100%, auto);
+        }
+
+        & .header-categories-samples {
+            & > div {
+                background: $second-color;
+                margin: 1rem;
+                @include size-WH(33%, auto);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+
+                & > img {
+                    margin: 1rem;
+                    width: 80%;
+                }
+
+                &:hover .btn-category::before {
+                    @include transform(skewY(-4.5deg) translate3d(0,100%,0));
+                }
+
+                & .btn-category {
+                    font-weight: 500;
+                    padding: 0.8rem 1rem;
+                    color: #1e1e1e;
+                    background: #c1c1c1;
+                    font-size: 0.8rem;
+                    margin-bottom: 1rem;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        @include position-XY(absolute,top,-24%,left,0);
+                        @include size-WH(110%, 154%);
+                        content: "";
+                        background: #ffffffab;
+                        @include transform(skewY(-5.5deg));
+                        @include transitions-with-effect(all,0.5s,cubic-bezier(0.785, 0.135, 0.15, 0.86));
+                        display: block;
+                    }
+
+                    p {
+                        margin: 0;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-new-brands {
+        @include box-config(display,flex,flex-direction,column);
+        align-items: center;
+
+        & .header-new-brands-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 4rem;
+            color: $second-color;
+            font-size: 1.8rem;
+            text-transform: none;
+            text-align: center;
+            font-weight: lighter;
+
+            & p {
+                margin: 0;
+                line-height: 1.4em;
+            }
+
+            p:first-child {
+                background: $primary-color;
+                width: 160px;
+            }
+
+            p:last-child {
+                background: $primary-color;
+                width: 100px;
+            }
+        }
+
+        & .header-new-brands-samples {
+            display: flex;
+            margin-bottom: 8rem;
+
+            & div {
+                margin: 0.5rem;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                & p {
+                    @include position-XY(absolute,top,50%,left,50%);
+                    display: ruby;
+                    @include transform(translateX(-50%) translateY(-50%));
+                    color: $second-color;
+                    text-transform: uppercase;
+                    font-size: 1.8rem;
+                    @include transitions-with-effect(all, 0.5s, ease-out);
+                    z-index: 2;
+                    font-weight: lighter;
+                }
+
+                &::after {
+                    @include position-XY(absolute,top,-10%,left,0);
+                    @include size-WH(100%, 120%);
+                    content: '';
+                    background: rgba(30,30,30,.35);
+                    @include transform(skewY(-4deg) translate3d(0,-100%,0));
+                    @include transitions-with-effect(all, .4s, cubic-bezier(.785,.135,.15,.86));
+                    z-index: 1;
+                }
+
+                &:hover {
+
+                    &::after{
+                        @include transform(skewY(5deg) translate3d(0,0,0));
+                    }
+                    
+                    & p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

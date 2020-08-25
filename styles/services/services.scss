@@ -1,0 +1,28 @@
+.main-container {
+    & .wrapper {
+        & main {
+            color: #4a4a4a;
+            
+            & .row {
+                & .left-side {
+                    & h5 {
+                        margin-top: 1em;
+                        font-size: 1.05em;
+                    }
+                }   
+                & .right-side {
+                    font-weight: lighter;
+
+                    & p {
+                        line-height: 2em;
+                        margin-bottom: 2em;
+
+                        & a {
+                            font-weight: 500;
+                        }
+                    }
+                } 
+            } 
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.main-container {
+    & .wrapper {
+        & main {
+            & .row {
+                & .middle-side {
+                    & .first-description {
+                        font-size: 1.35em;
+                    }
+
+                    & .container-fluid {
+                        & .who-are-we-slider {
+                            & .col-12 {
+                                padding: 0;
+                                cursor: grab;
+
+                                & img {
+                                    width: 100%;
+                                    min-height: 12.4em;
+                                }
+                            }
+                        }
+
+                        & i {
+                            @include position-XY(absolute,bottom,0.9em,padding,0.3em 0.6em);
+                            @include transitions-with-effect(all,0.1s,ease);
+                            @include text-config(font-size,2.5em,cursor,pointer,background,#fff);
+
+                            &:hover {
+                                font-size: 2.3em;
+                                bottom: 1em;
+                            }
+                        }
+
+                        & .next-slide {
+                            right: 0.37em;
+                        }
+
+                        & .prev-slide {
+                            right: 2.1em;
+                        }
+
+                        .slick-dots li button:before {
+                            color: $primary-color;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .row {
+            & .left-side, & .middle-side {
+                & h5 {
+                    margin-top: 1em;
+                    font-size: 1.05em;
+                }
+            }   
+
+            & .right-side, & .middle-side {
+                font-weight: lighter;
+
+                & p {
+                    line-height: 2em;
+                    margin-bottom: 2em;
+
+                    & a {
+                        font-weight: 500;
+                    }
+                }
+            } 
+        } 
+    }
+
+    & .main-cover-image {
+        background-image: url("/images/bg-apropos.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 50vw;
+        display: inline-block;
+        position: relative;
+        
+        & .main-cover-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding-top: 1em;
+            padding-bottom: 4em;
+
+            & .main-cover-content {
+                position: absolute;
+                width: 50%;
+                right: 50%;
+                top: 0;
+                background: #F7F7F7;
+                padding: 2em 3em 4em;
+
+                & p {
+                    width: 33em;
+                    margin: 0 4em 0 auto;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+// media brekpoint START
+@import 'media-breakpoint-down-lg';
+// media brekpoint END

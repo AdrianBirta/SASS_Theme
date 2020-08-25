@@ -1,0 +1,17 @@
+.main-container {
+    & .wrapper {
+        & main {
+            & .row {
+                & .middle-side {
+                    & p {
+                        @include text-config(font-weight,lighter,line-height,2em,margin-bottom,2em);
+                    }
+
+                    h3 {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

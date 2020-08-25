@@ -1,0 +1,17 @@
+<svg width="21" height="12" xmlns="http://www.w3.org/2000/svg">
+ <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+ <desc>Created with Sketch.</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="14" width="23" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(89.9845, 10.445, 6.04704)" stroke-linecap="round" fill-rule="evenodd" fill="none" id="Symbols">
+   <g stroke-width="1.5" stroke="#9B9B9B" id="icon/&gt;">
+    <polyline points="24.54119634628296,15.739428043365479 24.54119634628296,28.73942804336548 11.541194915771484,28.73942804336548 " transform="rotate(-45, 5.84881, 6.04704) translate(-12.1924, -16.1924)" id="Rectangle-2"/>
+   </g>
+  </g>
+ </g>
+</svg>

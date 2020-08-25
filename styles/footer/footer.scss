@@ -1,0 +1,221 @@
+footer {
+    background: #fff;
+
+    & .footer-partners {
+        @include box-config(display,flex,justify-content,center);
+        padding: 3rem;
+
+        & a {
+            margin:0 10px;
+        }
+    }
+
+    & .footer-reinsurance {
+        @include d-flex(justify-content,space-between,font-weight,initial);
+
+        & .box {
+            @include size-WH(100%, auto);
+            @include d-flex(justify-content,center,align-items,center);
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            padding: 1rem 2rem;
+
+            & p {
+                margin: 0;
+                color: $primary-color;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                margin-left: 1rem;
+                text-align: center;
+            }
+        }
+    }
+
+    & .footer-bottom {
+        @include box-config(display,flex,justify-content,space-between);
+        padding: 3rem 2rem;
+
+        & .footer-bottom-contact {
+            display: flex;
+
+            & i {
+                font-size: 2rem;
+            }
+
+            & span {
+                margin-left: 1rem;
+
+                & p:first-child {
+                    margin: 0;
+                    font-size: 0.8rem;
+
+                    & a{
+                        color: $third-color;
+                    }
+                }
+
+                & p:last-child {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    letter-spacing: 2px;
+                    word-spacing: 5px;
+
+                    & a {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        & .footer-bottom-cards {
+            & > img {
+                margin: 0 2rem;
+            }
+        }
+
+        & .footer-bottom-social {
+            & a {
+                font-size: 1.2rem;
+                margin: 0 0.5rem;
+                color: $third-color;
+            }
+        }
+    }
+
+    & .footer-closure {
+        @include d-flex(justify-content,space-between,align-items,center);
+        background: #232323;
+        color: #9b9b9b;
+
+        & .footer-clouser-credits p {
+            margin: 0 1rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        & section {
+            display: flex;
+
+            & .footer-clouser-menu ul, & .footer-clouser-langs ul {
+                padding: 1rem;
+            }
+
+            & .footer-clouser-menu ul, & .footer-clouser-langs ul, & .footer-clouser-langs {
+                list-style: none;
+                margin: 0;
+                display: flex;
+
+                & li {
+                    text-transform: uppercase;
+                    align-items: center;
+                    font-size: 0.7rem;
+                    margin: 0 1rem;
+
+                    & a {
+                        color: #9b9b9b;
+                        font-weight: 500;
+                        font-size: 1.05em;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $second-color;
+                        }
+                    }
+                }
+            }
+
+            & .footer-clouser-langs {
+
+                & ul li a, & .footer-clouser-langs-left a {
+                    color: $second-color;
+                    text-decoration: none;
+                }
+
+                & .footer-clouser-langs-left a {
+                    cursor: default;
+                }
+
+                & .footer-clouser-langs-left {
+                    @include d-flex(justify-content,center,font-weight,500);
+                    text-transform: uppercase;
+                    font-size: 0.7rem;
+                    margin: 1rem;
+                }
+
+                & .footer-clouser-langs-right {
+                    display: flex;
+                }
+
+                & .back-to-top {
+                    background: #fff;
+                    position: relative;
+                    width: 3rem;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    & i {
+                        @include position-XY(absolute,top,50%,left,50%);
+                        @include size-WH(5px,5px);
+                        -webkit-transform: rotate(-135deg) translate3d(-50%,-50%,0);
+                        transform: rotate(-135deg) translate3d(-50%,-50%,0);
+                        border-bottom: 1.5px solid #1e1e1e;
+                        border-right: 1.5px solid #1e1e1e;
+                        margin-left: -2px;
+                    }
+
+                    & i:first-child {
+                        margin-top: -7px;
+                    }
+
+                    & i:last-child {
+                        margin-top: -2px;
+                    }
+
+                    &:hover {
+                        & i:first-child {
+                            -webkit-animation: arrow-top 1.5s cubic-bezier(.785,.135,.15,.86) infinite;
+                            animation: arrow-top 1.5s cubic-bezier(.785,.135,.15,.86) infinite;
+                        }
+                        & i:last-child {
+                            -webkit-animation: arrow-top 1.5s cubic-bezier(.785,.135,.15,.86) infinite .3s;
+                            animation: arrow-top 1.5s cubic-bezier(.785,.135,.15,.86) infinite .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cookies-popup .container-fluid .row .col-12 {
+    @include d-flex(align-items,center,flex-direction,column);
+    @include position-XY(fixed,bottom,0,padding,0.8rem);
+    background: #fff;
+    z-index: 4;
+
+    & p a{
+        text-decoration:underline!important;
+        &:hover {
+            color: $third-color;
+            cursor: default;
+        }
+    }
+    
+    & button {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0.3rem 0.7rem;
+        background: #2d2d2a;
+        border: none;
+        cursor: default;
+    }
+}
+
+// breakpoints start
+@import 'media-breakpoint-down-lg';
+// breakpoints end
+
+// key-frames start
+@import '../key-frames/footer.scss';
+// key-frames end

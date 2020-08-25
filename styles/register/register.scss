@@ -1,0 +1,35 @@
+.main-container {
+    & .wrapper {
+        & main {
+            & .container-fluid {
+                & .row {
+                    & .submit-registration {
+                        @include d-flex(align-items,center);
+
+                        & .form-box-submit {
+                            @include position-XY(absolute,right,15px);
+                        }
+
+                        & .submit-registration-go-back {
+                            @include box-display(inline-block,overflow,hidden,color,lightgrey);
+                            position: relative;
+
+                            &::before {
+                                @include position-XY(absolute,top,25px,left,-200%);
+                                @include size-WH(200%,1px);
+                                @include box-display(inherit,background,lightgrey,content,"");
+                            }
+
+                            &:hover {
+                                &::before {
+                                    animation: line-bottom 0.9s forwards;
+                                    animation-delay: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

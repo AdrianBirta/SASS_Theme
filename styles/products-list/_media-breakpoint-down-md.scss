@@ -1,0 +1,140 @@
+@include media-breakpoint-down(md) {
+
+    .free-shipping-bottom-box {
+        max-width: 100%;
+    }
+
+    .list-filters-top {
+        position: relative;
+
+        .top-display {
+            position: absolute;
+            top: 3em;
+        }
+
+        .top-sort {
+            position: absolute !important;
+            top: 3.5em !important;
+            width: 11em !important;
+            border-bottom: unset !important;
+            left: 30vw;
+        }
+
+        .top-title {
+            width: 100% !important;
+        }
+    }
+
+    .list-filters-bottom {
+        display: contents !important;
+
+        .bottom-total-items {
+            width: 100%;
+        }
+
+        .bottom-remove-filters {
+            width: 15em;
+            margin-top: .5em;
+            margin-right: 1em;
+        }
+
+        .bottom-applied-filters {
+            width: 10em;
+            margin-left: 0 !important;
+            margin-top: .5em;
+        }
+    }
+
+    .mobile-filter-toggle {
+        display: block !important;
+        @include size-WH(100%, 2.5em);
+        background-color: #fff;
+        border: 1px solid #d8d8d8;
+        padding-right: 2em;
+        padding-left: 2em;
+        position: relative;
+        margin-top: 1em;
+        cursor: pointer;
+
+        & .icon-filter {
+            @include size-WH(19px, 19px);
+            position: absolute;
+            right: 2em;
+            top: .2em;
+        }
+
+        & .mobile-filter-toggle-title {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            color: #1e1e1e;
+            font-weight: 500;
+            font-size: .8em;
+            margin-top: .6em;
+        }
+    }
+
+    sidebar {
+        display: none;
+    }
+
+    .product-list-filters {
+        & .icon-grid-full {
+            display: block;
+        }
+
+        & .icon-grid-small {
+            display: none;
+        }
+    }
+
+    .row {
+        padding-right: 2em;
+    }
+
+    .product-rows.row.row-cols-1 {
+        .col {
+            height: 30em !important;
+
+            .product-item {
+                height: 29em !important;
+
+                .product-item-top {
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .list-filters-middle {
+        display: none !important;
+    }
+
+    .middle-show-extra {
+        display: none !important;
+    }
+
+    .product-rows.row.row-cols-2 {
+        .col {
+            height: 20em !important;
+
+            .product-item {
+                height: 19em !important;
+
+                .product-item-top {
+                    width: 50%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .middle-filter-dropdown {
+        display: none;
+    }
+
+    .middle-filter-dropdown.active {
+        display: unset;
+    }
+}

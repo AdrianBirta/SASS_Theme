@@ -1,0 +1,33 @@
+@include media-breakpoint-down(md) {
+    .checkout-section {
+        &::before { display: none; }
+
+        & .wrapper {
+            & main {
+                & .cart-section {
+                    & .container-fluid {
+                        & .row {
+                            & .main-cart {
+                                & .row {
+                                    & .main-block {
+                                        & .main-block-content {
+                                            padding: 2em;
+
+                                            & .row {
+                                                & .product-sku,
+                                                & .product-size,
+                                                & .product-price {
+                                                    @include d-flex(justify-content,center,align-items,center);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

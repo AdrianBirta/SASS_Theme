@@ -1,0 +1,82 @@
+@mixin box-config($property1, $val1, $property2, $val2) {
+    #{$property1}: $val1;
+    #{$property2}: $val2;
+    text-transform: uppercase;
+    padding: 7px 7px 0;
+}
+
+@mixin border-bottom($top) {
+    content: '';
+    display: block;
+    position: relative;
+    top: $top;
+    width: 0;
+    height: 2px;
+    background: $primary-color;
+    transition: .3s ease-out;
+}
+
+@mixin size-WH($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin transition($transition, $duration) {
+    -webkit-transition: $transition, $duration;
+    -o-transition: $transition, $duration;
+    transition: $transition, $duration;
+}
+
+@mixin transitions-with-effect($type, $duration, $transition) {
+    -webkit-transition: $type $duration $transition;
+    -o-transition: $type $duration $transition;
+    transition: $type $duration $transition;
+}
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -ms-transform: $args;
+    transform: $args;
+}
+@mixin transform-origin($args...) {
+    -webkit-transform-origin: $args;
+    -ms-transform-origin: $args;
+    transform-origin: $args;
+}
+
+@mixin position-XY($position, $property1, $val1, $property2:null, $val2:null) {
+    position:$position;
+    #{$property1}: $val1;
+    #{$property2}: $val2;
+}
+
+@mixin d-flex($property1, $val1, $property2:null, $val2:null) {
+    display:flex;
+    #{$property1}: $val1;
+    #{$property2}: $val2;
+}
+
+@mixin box-shadow($args...) {
+-webkit-box-shadow: $args;
+-moz-box-shadow: $args;
+box-shadow: $args;
+}
+
+@mixin box-form($padding: 0.7em,$background: #fff,$border: 1px solid,$width: 100%) {
+    padding: $padding;
+    background: $background;
+    border: $border;
+    width: $width;
+}
+
+@mixin box-display($display, $property1, $val1, $property2:null, $val2:null) {
+    display:$display;
+    #{$property1}: $val1;
+    #{$property2}: $val2;
+}
+
+@mixin text-config($property1, $val1, $property2:null, $val2:null, $property3:null, $val3:null, $property4:null, $val4:null) {
+    #{$property1}: $val1;
+    #{$property2}: $val2;
+    #{$property3}: $val3;
+    #{$property4}: $val4;
+}

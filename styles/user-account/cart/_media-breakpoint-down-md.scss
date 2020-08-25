@@ -1,0 +1,22 @@
+@include media-breakpoint-down(md) {
+    main {
+        & .cart-section {
+            & .container-fluid {
+                & .main-cart {
+                    & .main-block {
+                        & .main-block-content {
+                            & .row  {
+                                & .product-sku, & .product-size, & .product-price {
+                                    display: ruby;
+                                    width: 33%;
+                                    text-align: center;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

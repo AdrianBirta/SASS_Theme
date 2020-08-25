@@ -1,0 +1,14 @@
+.main-block-content .row .col-lg-6 {
+    & h5 {
+        font-size: 0.9em;
+    }
+    
+    & p {
+        width: 13em;
+        margin-bottom: 3.5em;
+    }
+}
+
+// breakpoints start
+@import 'media-breakpoint-down-md';
+// breakpoints end

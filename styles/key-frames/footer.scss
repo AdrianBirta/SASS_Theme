@@ -1,0 +1,14 @@
+@keyframes arrow-top {
+    25% {
+        top: 30%;
+        opacity: 0;
+    }
+    50% {
+        top: 70%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}

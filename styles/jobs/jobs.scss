@@ -1,0 +1,47 @@
+.main-container {
+    & .wrapper {
+        & main {
+            & .row {
+                & .middle-side {
+                    & .main-block {
+                        & .main-block-content {
+                            & .job-item-row {
+                                & .col-sm-2, & .col-sm-3 {
+                                    & .row {
+                                        & .col-6, & .col-3 {
+                                            height: 5em;
+
+                                            & p {
+                                                margin:0;
+                                            }
+
+                                            & small {
+                                                font-size: 0.9em;
+                                            }
+                                        }
+
+                                        & .col-6 {
+                                            @include d-flex(justify-content,flex-start,align-items,center);
+                                            @include text-config(font-size,0.9em,font-weight,bold);
+                                        }
+                                    }
+
+                                    & .form-box-submit-grey {
+                                        min-width: 126px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// media breakpoint START
+
+@import 'media-breakpoint-down-xs';
+
+// media breakpoint END

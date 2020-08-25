@@ -1,0 +1,77 @@
+.checkbox-container {
+    position: relative;
+    margin-left: 1em;
+
+    & label {
+        text-transform: unset;
+    }
+
+    .form-checkbox {
+        display: none;
+    }
+
+    .form-checkbox:checked + label {
+        color: #1E1E1E;
+    }
+
+    .form-checkbox:checked + label:before {
+        outline-color: #1e1e1e;
+        border-color: #1e1e1e;
+    }
+
+    .form-checkbox:checked + label:after {
+        @include transform(scale3d(1, 1, 1));
+        @include transitions-with-effect(all, .3s, cubic-bezier(0.535, 1.65, 0.635, 1.005));
+    }
+
+    .form-checkbox + label {
+        padding-left: 30px;
+        font-size: 0.875em;
+        color: #B4B4B4;
+        font-weight: 500;
+        cursor: pointer;
+        @include transition(all, .3s);
+        margin: 5px 0;
+        display: block;
+    }
+
+    .form-checkbox + label:hover:before {
+        border: 1px solid #1e1e1e;
+        outline: 1px solid #1e1e1e;
+        @include transition(all, .3s);
+    }
+
+    .form-checkbox + label:before {
+        content: '';
+        @include size-WH(20px, 20px);
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        left: 0;
+        border: 1px solid #D8D8D8;
+        outline: 1px solid rgba(30, 30, 30, 0);
+        @include transition(all, .3s);
+    }
+
+    .form-checkbox + label:after {
+        content: '';
+        @include size-WH(20px, 20px);
+        left: 0;
+        top: 50%;
+        position: absolute;
+        margin-top: -10px;
+        background: transparent url(../images/icons/check.svg) center center no-repeat;
+        background-size: 11px 8px;
+        @include transform(scale3d(0, 1, 1));
+        @include transitions-with-effect(all, .3s, cubic-bezier(.785,.135,.15,.86));
+    }
+
+    label {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+.newsletter-box-content {
+    height:15rem;
+}

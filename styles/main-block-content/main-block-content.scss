@@ -1,0 +1,22 @@
+.main-block {
+    & h4 {
+        font-size: 1.125em;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .main-block-content {
+        height: calc(100% - 4em);
+        background: #fff;
+        padding: 30px;
+        position: relative;
+
+        & > p {
+            margin-bottom: 3em;
+        }
+
+        & .form-box-submit {
+            @include position-XY(absolute,bottom,30px,right,30px);
+        }
+    }
+}

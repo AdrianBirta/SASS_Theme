@@ -1,0 +1,5 @@
+@include media-breakpoint-down(md) {
+    nav .wrapper .nav-center-container .nav-container .container-fluid .row {
+        @include d-flex(justify-content,space-between,flex-wrap,nowrap);
+    }
+}

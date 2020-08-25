@@ -1,0 +1,180 @@
+main .main-top {
+    .main-top-slider {
+        display: inline-block;
+        @include size-WH(100%, 450px);
+        margin-bottom: 6rem;
+        position: relative;
+
+        .slick-dots {
+            & li {
+                margin: 0;
+
+                & button::before {
+                    color: $primary-color;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .slick-slider {
+            position: initial;
+        }
+
+        .slider {
+            & .slick-list {
+                cursor: grab;
+                z-index: 4;
+            }
+
+            & .slick-prev {
+                left: -39px;
+            }
+
+            & .slick-prev, & .slick-next {
+                @include transform(translateY(-50%));
+                position: absolute;
+                top: 50%;
+
+                &::before {
+                    font-size: 2rem;
+                    color: gray;
+                    animation: arrow-highlight-out .5s forwards;
+                }
+
+                &:hover::before {
+                    animation: arrow-highlight-in .5s forwards;
+                }
+            }
+        }
+
+        & .container-fluid .row {
+            & .col-12 {
+                & .slider-title p {
+                    text-transform: none;
+                    font-size: 1.8rem;
+                    font-weight: lighter;
+                }
+            }
+
+            & .col-3 {
+                max-width: 100%;
+
+                & .product-item {
+                    background: $second-color;
+                    padding: 0.5rem;
+                    cursor: pointer;
+
+                    & .product-item-top {
+                        & img{
+                            width: 100%;
+                        }
+
+                        & .product-item-thumbs {
+                            @include transitions-with-effect(all, .5s, ease);
+                            height: 0;
+                            overflow: hidden;
+                            position: relative;
+                            margin-bottom: 0.5rem;
+
+                            & a {
+                                @include transitions-with-effect(all, 1s, ease);
+                                position: absolute;
+                                width: 45px;
+                                display: inline-block;
+                                opacity: 0;
+                            }
+
+                            @for $i from 1 through 5 {
+                                & a:nth-child(#{$i}) {
+                                    // margin:0 30px;
+                                    @if $i == 1 {
+                                        left: $i * 1%;
+                                    } @else if $i == 2 {
+                                        left: $i * 10%;
+                                    } @else if $i == 3 {
+                                        left: $i * 13.3%;
+                                    } @else if $i == 4 {
+                                        left: $i * 15%;
+                                    } @else if $i == 5 {
+                                        left: $i * 16%;
+                                    }
+                                }
+                            }
+
+                            & .item-box-line {
+                                @include position-XY(absolute,bottom,0,left,0);
+                                @include size-WH(20%,1px);
+                                @include transitions-with-effect(all, .3s, ease);
+                                background: transparent;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        & .product-item-top .product-item-thumbs {
+                            height: 50px;
+
+                            @for $i from 1 through 5 {
+                                & a:nth-child(#{$i}) {
+                                    animation: product-item-thumb-in .3s forwards;
+                                    animation-delay: $i * 0.1s;
+                                }
+                            }
+
+                            & .item-box-line {
+                                background: red;
+                            }
+                        }
+                    }
+
+                    & .product-item-bottom {
+                        width: 100%;
+                        text-align: center;
+
+                        & .product-item-badge {
+                            color: $primary-color;
+                            font-size: .875em;
+                            text-transform: capitalize;
+                            font-style: italic;
+                            font-family: Georgia,serif;
+                            font-weight: 700;
+
+                        }
+
+                        & .product-item-brand {
+                            letter-spacing: 1.5px;
+                            font-size: 0.9rem;
+                            margin-bottom: 0;
+                        }
+
+                        & .product-item-title {
+                            font-weight: 400;
+                            font-size: .875em;
+                            text-transform: capitalize;
+                            margin: 0;
+                            letter-spacing: 2.33px;
+                            line-height: 1.5em;
+                        }
+
+                        & .product-item-price {
+                            font-weight: 700;
+                            font-size: .875em;
+                            text-transform: uppercase;
+                            margin: 0.6em 0 2em;
+                            letter-spacing: 2.33px;
+                            line-height: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// breakpoints start
+@import 'media-breakpoint-max-width-479';
+// breakpoints end
+
+// key-frames start
+@import '../key-frames/slider.scss';
+// key-frames end

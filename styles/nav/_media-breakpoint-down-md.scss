@@ -1,0 +1,11 @@
+@include media-breakpoint-down(md) {
+    nav {
+        & .nav-center-container .nav-container .container-fluid .row .col-md-4 .nav-container-logo {
+            text-align: center;
+            
+            & img {
+                width: 170px;
+            }
+        }
+    }
+}

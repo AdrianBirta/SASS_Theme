@@ -1,0 +1,36 @@
+@import 'fonts/gillsans';
+@import "fonts/font-awesome/all.min";
+@import 'variables';
+
+// Import Bootstrap
+@import "vendor/bootstrap/scss/bootstrap.scss";
+
+// Import Slick
+@import "vendor/slick/slick-theme.scss";
+@import "vendor/slick/slick.scss";
+
+
+@import 'mixins';
+@import 'general';
+
+@import 'nav/nav';
+@import 'header/header';
+@import 'main/main';
+@import 'footer/footer';
+
+@import 'form/form';
+@import 'main-block-content/main-block-content';
+
+@import 'products-list/products-list';
+@import 'product-details/product-details';
+
+@import 'login/login';
+@import 'register/register';
+@import 'forgot-password/forgot-password';
+
+@import 'services/services';
+@import 'terms-and-conditions/terms-and-conditions';
+@import 'jobs/jobs';
+@import 'who-are-we/who-are-we';
+
+@import 'user-account/account';

@@ -1,0 +1,18 @@
+@include media-breakpoint-down(xs) {
+    main .main-top .main-top-free-shipping .row {
+        & .free-shipping-left-box img {
+            width: 100%;
+        }
+
+        & .free-shipping-right-box img {
+            width: 80%;
+            margin-bottom: 4rem;
+        }
+    }
+
+    main .main-bottom .main-bottom-newsletter-container
+    .main-bottom-newsletter .main-bottom-newsletter-box
+    form .newsletter-box-email {
+        padding: 0;
+    }
+}

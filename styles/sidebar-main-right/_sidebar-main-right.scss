@@ -1,0 +1,198 @@
+.sidebar-main-right {
+    @include position-XY(fixed,top,0,right,-200%);
+    @include d-flex(flex-direction,column,max-width,315px);
+    @include transitions-with-effect(all, .5s, ease);
+    height: 100%;
+    background: $second-color;
+    z-index: 5;
+    padding: 1rem;
+    overflow: hidden;
+
+    & p {
+        margin: 0;
+    }
+
+    & .sidebar-main-right-top {
+        width: 100%;
+        overflow: hidden;
+        min-height: 3em;
+
+        & section{
+            @include position-XY(relative,left,-7px,width,110%);
+            @include d-flex(align-items,center,border-bottom,1px solid lightgray);
+            @include transitions-with-effect(all, .5s, ease);
+            cursor: pointer;
+            padding-bottom: 10px;
+
+            &:hover {
+                left: 0px;
+            }
+
+            & span {
+                @include size-WH(15px,1.8px);
+                @include transform(rotate(40deg));
+                background: lightgray;
+                display: inline-block;
+                margin-right: 0.4rem;
+
+                &:after {
+                    @include size-WH(15px,1.8px);
+                    @include transform(rotate(-82deg));
+                    content: "";
+                    background: lightgray;
+                    display: block;
+                    margin-right: 0.4rem;
+                }
+            }
+
+            & p {
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                color: darken(lightgray, 20%);
+            }
+        }
+
+        & .cart-counter {
+            @include position-XY(absolute,top,15px,left,50%);
+            @include d-flex(justify-content,center,cursor,default);
+            background: #f0f0f0;
+            border-radius: 50%;
+            width: 30px;
+            color: red;
+        }
+    }
+
+    & .account-sidebar-main,
+    & .account-sidebar-main .account-sidebar-main-header,
+    & .account-sidebar-main .sidebar-main-content {
+        @include d-flex(flex-direction,column,font-size,1rem);
+    }
+
+    & .account-sidebar-main .account-sidebar-main-header {
+        padding: 4rem 0;
+        font-size: 2rem;
+
+        & p:first-child {
+            line-height: 15px;
+        }
+    }
+
+    & .account-sidebar-main .sidebar-main-content {
+        min-height: 717px;
+
+        & .account-sidebar-main-content-top {
+            & input {
+                @include transitions-with-effect(all, 1s, ease);
+                width: 100%;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $third-color;
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+                padding-left: 0.5rem;
+            }
+
+            & .account-sidebar-email:focus, & .account-sidebar-password:focus {
+                border-bottom: 1px solid lighten($third-color, 80%);
+            }
+        }
+
+        & .account-sidebar-main-content-center {
+            @include d-flex(width,100%,margin-top,3rem);
+
+            & button {
+                width: 50%;
+                border: none;
+                background: #a5a5a5;
+                padding: 0.6rem 0;
+                font-weight: 500;
+                position: relative;
+                overflow: hidden;
+
+                &:hover::before {
+                    @include transform(skewY(-4.5deg) translate3d(0,100%,0));
+                }
+            }
+
+            & .account-sidebar-login {
+                margin-right: 5px;
+                color: #fff;
+
+                &::before {
+                    @include position-XY(absolute,left,0,top,-30%);
+                    @include size-WH(110%,160%);
+                    @include transform(skewY(-4.5deg));
+                    @include transitions-with-effect(all, .5s, cubic-bezier(.785,.135,.15,.86));
+                    content: '';
+                    background: #1e1e1e;
+                }
+            }
+
+            & .account-sidebar-register {
+                color: #000;
+
+                &::before {
+                    @include position-XY(absolute,left,0,top,-30%);
+                    @include size-WH(110%,160%);
+                    @include transform(skewY(-4.5deg));
+                    @include transitions-with-effect(all, .5s, cubic-bezier(.785,.135,.15,.86));
+                    content: '';
+                    background: lighten(#1e1e1e, 75%);
+                }
+            }
+
+            & .account-sidebar-login span, & .account-sidebar-register span {
+                z-index: 1;
+                position: relative;
+            }
+        }
+
+        & .account-sidebar-main-content-bottom {
+            @include position-XY(relative,align-self,flex-end,line-height,50px);
+            text-align: right;
+            overflow: hidden;
+            cursor: pointer;
+
+            &::before {
+                @include position-XY(absolute,top,40px,left,-200%);
+                @include size-WH(200%,1px);
+                content: "";
+                background: #000;
+                display: inherit;
+            }
+
+            &:hover {
+                color: $third-color;
+
+                &::before {
+                    animation: line-bottom 0.9s forwards;
+                    animation-delay: 0.3s;
+                }
+            }
+        }
+    }
+
+    & .cart-sidebar-main {
+        color: lightgray;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        & .subtotal {
+            background: #fff;
+            border: 1px solid;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+}
+
+.sidebar-toggle-right {
+    right: 0;
+}
+
+// key-frames start
+@import '../key-frames/sidebar-main-right.scss';
+// key-frames end

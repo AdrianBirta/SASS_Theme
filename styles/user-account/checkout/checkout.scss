@@ -1,0 +1,119 @@
+.checkout-section {
+    position:relative;
+
+    &::before {
+        @include position-XY(absolute,left,0,top,0);
+        @include size-WH(30%,85%);
+        content: '';
+        background: #f0f0f0;
+    }
+
+    & .wrapper {
+        & main {
+            & .cart-section {
+                & .container-fluid {
+                    & .row {
+                        & .footer-cart {
+                            & .sub-total, & .grand-total {
+                                border-bottom: 1px solid lightgray;
+
+                                & .col-7 {
+                                    & .row {
+                                        & .col-12 {
+                                            & p {
+                                                width: 8em;
+                                                position: relative;
+                                                right: 3em;
+                                                display: ruby;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            & .grand-total {
+                                border: none;
+                            }
+
+                            & .row {
+                                & .shipping-box {
+                                    width: 100%;
+                                    margin: 0.5em 1em;
+                                    border: 1px solid lightgray;
+                                    background: #fff;
+
+                                    & .col-12 {
+                                        padding: 0;
+                                        margin: 0;
+
+                                        & .main-block {
+                                            border: 3px solid transparent;
+                                            cursor: pointer;
+                                            @include transitions-with-effect(all,.5s,ease);
+
+                                            & .main-block-content {
+                                                padding: 1em;
+
+                                                & .shipping-price {
+                                                    @include position-XY(absolute,top,1em,right,1em);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                border: 3px solid #000;
+                                                // box-shadow: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                & .col-12 {
+                                    & .form-box-submit {
+                                        &::before {
+                                            height: 223%;
+                                            top: -68%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & .main-cart {
+                            & .row {
+                                & .main-block {
+                                    & .main-block-content {
+                                        padding: 2em;
+
+                                        & .row {
+                                            & .product-sku,
+                                            & .product-size,
+                                            & .product-price {
+                                                left: 0;
+                                            }
+
+                                            & .product-sku p{
+                                                display: ruby;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.arrow {
+    background-image: url(/images/icons/arrow-down.svg);
+    background-position: right;
+    background-size: 1em;
+    background-repeat: no-repeat;
+}
+
+// breakpoints start
+@import 'media-breakpoint-down-md';
+@import 'media-breakpoint-down-xs';
+// breakpoints end

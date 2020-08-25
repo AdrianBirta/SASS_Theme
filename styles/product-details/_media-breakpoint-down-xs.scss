@@ -1,0 +1,13 @@
+@include media-breakpoint-down(xs) {
+    @media only screen and (max-width: 430px) {
+        .main-container {
+            .wrapper {
+                background: #f0f0f0;
+
+                .product-gallery-list {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+sidebar {
+    float: left;
+    width: 217px;
+    height: 100vw;
+
+    h3 {
+        font-size: .8em;
+        font-weight: 500;
+        color: #9b9b9b;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+    }
+
+    ul {
+        font-size: .875em;
+        font-weight: 500;
+        list-style: none;
+
+        li {
+            a {
+                color: $products-list-sidebar-link;
+
+                &:hover {
+                    color: $products-list-sidebar-link-hover;
+                }
+            }
+        }
+    }
+}

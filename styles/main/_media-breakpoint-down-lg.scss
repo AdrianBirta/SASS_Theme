@@ -1,0 +1,50 @@
+@include media-breakpoint-down(lg) {
+    main {
+        & .main-bottom .main-bottom-newsletter-container .main-bottom-newsletter {
+            width: 65%;
+            padding: 0;
+
+            & .container-fluid .row .col-12 p {
+                left: 50%;
+                @include transform(translateX(-50%));
+                top: -1.7rem;
+            }
+
+            & .main-bottom-newsletter-box {
+                & form {
+                    margin: 0;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1.5rem;
+
+                    & .newsletter-box-email {
+                        padding: 0;
+                        margin: 2rem 0 0;
+                        width: 100%;
+                        padding: 0 7rem 0.6rem 0.5rem;
+                        width: 100%;
+                    }
+
+                    & .newsletter-box-submit {
+                        top: 3rem;
+                        width: 70%;
+
+                        &::before {
+                            width: 100%;
+                            left: 0;
+                            height: 217%;
+                            position: absolute;
+                            top: -57%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        & .main-top .main-top-free-shipping .row {
+            & .free-shipping-bottom-box {
+                margin-top: 4rem;
+            }
+        }
+    }
+}

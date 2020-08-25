@@ -1,0 +1,15 @@
+{
+    "name": "Koala-Design-v2",
+    "description": "The new Koala.ch design",
+    "version": "1.0.0",
+    "engines": {
+        "node": "12.16.1"
+    },
+    "private": true,
+    "scripts": {
+        "compile": "sass ./styles/style.scss ./public/styles.css"
+    },
+    "devDependencies": {
+        "sass": "^1.26.5"
+    }
+}
