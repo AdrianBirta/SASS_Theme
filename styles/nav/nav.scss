@@ -192,7 +192,7 @@ nav {
                 }
 
                 & .list-box-item {
-                    @include position-XY(absolute,left,0,top,10.2rem);
+                    @include position-XY(absolute,left,0,top,9.2rem);
                     @include transitions-with-effect(all, .5s, ease-in-out);
                     border-top: 10px solid transparent;
                     max-height: 0px;
